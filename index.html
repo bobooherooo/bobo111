@@ -1,278 +1,79 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>我的網際網路作業</title>
-
-
-    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
-
-
     <style>
-
-
     </style>
-
 </head>
-
-
 <body>
-
-
-    <!-- =========================
-         網站標題
-    ========================= -->
-
-    <div style="
-        background-color:#e5e5e5;
-        padding:15px;
-        text-align:center;
-    ">
-
+    <div style="background-color:#e5e5e5; padding:15px; text-align:center;">
         <h1>我(班班)的網站</h1>
-
     </div>
-
-
-
-    <!-- =========================
-         網站主要區域
-    ========================= -->
-
     <div style="overflow:auto">
-
-
-
-
-
-
-        <!-- =========================
-             中間
-        ========================= -->
-
         <div class="main">
-
-
             <h2>我的第一個網站</h2>
-
-
-            <p>
-                歡迎來到我的網站。
-            </p>
-
-
-
-            <!-- =========================
-                 我的圖片
-            ========================= -->
-
+            <p>歡迎來到我的網站。</p>
             <h2>我的圖片</h2>
-
-
-            <img
-                src="123.jpg"
-                alt="我的圖片"
-                width="200"
-                height="300"
-            >
-
+            <img src="123.jpg" alt="我的圖片" width="200" height="300">
             <h2>同學網站</h2>
-
-
             <table>
-
-                <!-- 表格標題 -->
-
                 <tr>
-
                     <th>同學</th>
-
                     <th>網站</th>
-
-                </tr>
-
-
-
-                <!-- 同學一 -->
-
-                <tr>
-
-                    <td>
-                        同學一----->
-                    </td>
-
-                    <td>
-
-                        <a
-                            href="https://giohrtgesb.github.io/net-homework/"
-                            target="_blank"
-                        >
-                            點擊進入
-                        </a>
-
-                    </td>
-
                 </tr>
                 <tr>
-
-                    <td>
-                        同學二-----> 
-                    </td>
-
-                    <td>
-
-                        <a
-                            href="https://87mark0109.github.io/yifanxiaogg/"
-                            target="_blank"
-                        >
-                            點擊進入
-                        </a>
-
-                    </td>
-
+                    <td>同學一-----></td>
+                    <td><a href="https://giohrtgesb.github.io/net-homework/" target="_blank">點擊進入</a></td>
                 </tr>
-
                 <tr>
-
-                    <td>
-                        同學三----->
-                    </td>
-
-                    <td>
-
-                        <a
-                            href="https://lck0408.github.io/web/index.html"
-                            target="_blank"
-                        >
-                            點擊進入
-                        </a>
-
-                    </td>
-
+                    <td>同學二-----></td>
+                    <td><a href="https://87mark0109.github.io/yifanxiaogg/" target="_blank">點擊進入</a></td>
                 </tr>
-
+                <tr>
+                    <td>同學三-----></td>
+                    <td><a href="https://lck0408.github.io/web/index.html" target="_blank">點擊進入</a></td>
+                </tr>
             </table>
 
             <div class="chart">
-
                 <h2>喜歡食物的程度</h2>
-
-
-                <canvas
-                    id="myChart"
-                    style="width:100%;max-width:600px">
-                </canvas>
-
+                <canvas id="myChart" style="width:100%; max-width:600px"></canvas>
             </div>
-
-
         </div>
-
-
-
- 
-
-    <div style="
-        background-color:#e5e5e5;
-        text-align:center;
-        padding:10px;
-        margin-top:7px;
-    ">
-
-        !!! 結束!!!!
-
     </div>
-
+    <div style="background-color:#e5e5e5; text-align:center; padding:10px; margin-top:7px;">
+        !!! 結束!!!!
+    </div>
     <script>
+        const xValues = ["年糕", "壽司", "酪梨", "芒果", "苦瓜"];
+        const yValues =;
+        const barColors = ["red", "green", "blue", "orange", "brown"];
 
-        const xValues = [
-            "年糕",
-            "壽司",
-            "酪梨",
-            "芒果",
-            "苦瓜"
-        ];
-
-
-        const yValues = [
-            50,
-            40,
-            10,
-            45,
-            15
-        ];
-
-
-        const barColors = [
-            "red",
-            "green",
-            "blue",
-            "orange",
-            "brown"
-        ];
-
-
-        const ctx =
-            document.getElementById("myChart");
-
+        const ctx = document.getElementById("myChart");
 
         new Chart(ctx, {
-
             type: "bar",
-
-
             data: {
-
                 labels: xValues,
-
-
                 datasets: [{
-
                     backgroundColor: barColors,
-
                     data: yValues
-
                 }]
-
             },
-
-
             options: {
-
                 plugins: {
-
-                    legend: {
-                        display: false
-                    },
-
-
+                    legend: { display: false },
                     title: {
-
                         display: true,
-
                         text: "喜歡的食物",
-
-                        font: {
-                            size: 16
-                        }
-
+                        font: { size: 16 }
                     }
-
                 }
-
             }
-
         });
-
     </script>
-
-
 </body>
-
 </html>
